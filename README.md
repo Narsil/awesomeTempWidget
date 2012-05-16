@@ -20,7 +20,7 @@ Usage
 
 Place the temperatur.lua file somewehere your awesome-wm can read it. Then put the following in your rc.lua
 
-    temp = require("temperatur")
+    temp = require("temperature")
     myTempWidget = widget({type = "textbox", align = "right"})
     awful.hooks.timer.register(1, function() myTempWidget.text = temp.getTemp(60, 70) end)
 
@@ -31,7 +31,7 @@ if you want the update intervall to be higher, say 10 seconds, you need to adjus
 Now you need to add your widget to the wiibox:
 
     mywibox[s].widgets = { ...
-                           myTemperaturWidget,
+                           myTempWidget,
                            ...
                          }
 
